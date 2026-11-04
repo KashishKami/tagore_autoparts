@@ -1,0 +1,304 @@
+/* ========================================
+   CATEGORY CAROUSEL SECTION
+   ======================================== */
+.category-carousel-section {
+    padding: 20px 0;
+    background: #000;
+    position: relative;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #f8f9fa;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+}
+
+/* Left Content */
+.slide-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.slide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.slide-badge i {
+    color: #d32f2f;
+}
+
+.slide-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.slide-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.slide-description strong {
+    color: #1a1a1a;
+}
+
+/* Feature List */
+.slide-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.slide-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.slide-feature i {
+    color: #d32f2f;
+    font-size: 16px;
+}
+
+/* CTA Button */
+.slide-cta {
+    display: inline-block;
+    background: #d32f2f;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.slide-cta:hover {
+    background: #fff;
+    color: #d32f2f;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.slide-cta i {
+    margin-left: 8px;
+}
+
+/* Right Image */
+.slide-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Product Info Card */
+.product-info-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    min-width: 220px;
+}
+
+.product-info-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 5px 0;
+}
+
+.product-info-card p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.carousel-arrow {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.carousel-arrow:hover {
+    background: #d32f2f;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #d32f2f;
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (min-width: 992px) and (max-width: 1499px) {
+    .carousel-container {
+        padding: 0 clamp(16px, 2.8vw, 30px);
+    }
+
+    .carousel-slide {
+        padding: clamp(36px, 5vw, 60px);
+        gap: clamp(32px, 4vw, 60px);
+    }
+
+    .slide-title {
+        font-size: clamp(2rem, 3.4vw, 3rem);
+    }
+
+    .slide-description {
+        font-size: clamp(14px, 1.25vw, 16px);
+    }
+}
+
+@media (max-width: 991px) {
+    .carousel-slide {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 40px;
+    }
+    
+    .slide-content {
+        padding-right: 0;
+    }
+    
+    .slide-title {
+        font-size: 36px;
+    }
+    
+    .slide-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .carousel-arrow.prev {
+        margin-left: 10px;
+    }
+    
+    .carousel-arrow.next {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .category-carousel-section {
+        padding: 60px 0;
+    }
+    
+    .carousel-slide {
+        padding: 30px 20px;
+    }
+    
+    .slide-title {
+        font-size: 28px;
+    }
+    
+    .slide-description {
+        font-size: 14px;
+    }
+    
+    .product-info-card {
+        position: static;
+        margin-top: 20px;
+    }
+}

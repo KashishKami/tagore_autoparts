@@ -1,0 +1,318 @@
+/* ============================================================
+   HOW IT WORKS SECTION — MODERN & RESPONSIVE WITH VERTICAL TIMELINE
+   ============================================================ */
+
+.how-it-works-section {
+    background: #f9fafb;
+    padding: 60px 20px 70px;
+    position: relative;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.how-it-works-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 50px;
+}
+
+.how-it-works-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    background: #ffffff;
+    border: 2px solid #b71c1b;
+    color: #b71c1b;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.how-it-works-title {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.how-it-works-title .highlight {
+    color: #b71c1b;
+}
+
+.how-it-works-description {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   DESKTOP (>= 993px): 4-Column Connected Steps
+   ============================================================ */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Horizontal connecting line behind step numbers */
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 3px;
+    background: linear-gradient(90deg, #b71c1b 0%, #dc2626 50%, #b71c1b 100%);
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.step-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.step-number {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #b71c1b;
+    color: #b71c1b;
+    font-size: 26px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 14px rgba(183, 28, 27, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+    line-height: 1;
+}
+
+.step-card:hover .step-number {
+    background: #b71c1b;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(183, 28, 27, 0.45);
+}
+
+.step-content {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px 22px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .step-content {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+    border-color: #d1d5db;
+}
+
+.step-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #b71c1b;
+    background: rgba(183, 28, 27, 0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 10px;
+    line-height: 1.3;
+}
+
+.step-description {
+    font-size: 14.5px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================================
+   TABLET (768px - 992px): 2x2 Grid Layout
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 992px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+
+    .steps-grid::before {
+        display: none;
+    }
+
+    .step-content {
+        min-height: 200px;
+    }
+}
+
+/* ============================================================
+   MOBILE (< 768px): MODERN VERTICAL CONNECTED TIMELINE
+   ============================================================ */
+@media (max-width: 767px) {
+    .how-it-works-section {
+        padding: 40px 16px 48px;
+    }
+
+    .how-it-works-header {
+        margin-bottom: 28px;
+    }
+
+    .how-it-works-title {
+        font-size: 26px;
+    }
+
+    .how-it-works-description {
+        font-size: 14.5px;
+    }
+
+    /* Stack cards in a vertical timeline */
+    .steps-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        margin-top: 24px;
+    }
+
+    .steps-grid::before {
+        display: none !important;
+    }
+
+    .step-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        text-align: left;
+        transform: none !important;
+    }
+
+    /* Glowing vertical connecting line between step badges */
+    .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 48px;
+        bottom: -20px;
+        left: 23px; /* Center aligned with 48px badge */
+        width: 3px;
+        background: linear-gradient(180deg, #b71c1b 0%, #dc2626 50%, #b71c1b 100%);
+        border-radius: 3px;
+        z-index: 1;
+    }
+
+    /* Step Badge / Node */
+    .step-number {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 48px !important;
+        height: 48px !important;
+        min-width: 48px !important;
+        max-width: 48px !important;
+        border-radius: 50% !important;
+        background: linear-gradient(135deg, #b71c1b 0%, #dc2626 100%) !important;
+        border: 3px solid #ffffff !important;
+        box-shadow: 0 4px 12px rgba(183, 28, 27, 0.35) !important;
+        color: #ffffff !important;
+        font-size: 20px !important;
+        font-weight: 800 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 2 !important;
+        margin: 2px 0 0 0 !important;
+        line-height: 1 !important;
+    }
+
+    /* Modern Elevated Content Card */
+    .step-content {
+        flex: 1;
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 18px 18px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        position: relative;
+        z-index: 2;
+        text-align: left;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .step-content:active {
+        transform: scale(0.99);
+    }
+
+    .step-pill {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: #b71c1b;
+        background: rgba(183, 28, 27, 0.08);
+        padding: 3px 10px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+    }
+
+    .step-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #111827;
+        margin: 0 0 6px 0;
+        line-height: 1.3;
+    }
+
+    .step-description {
+        font-size: 13.5px;
+        color: #4b5563;
+        line-height: 1.55;
+        margin: 0;
+    }
+}

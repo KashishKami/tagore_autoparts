@@ -1,0 +1,468 @@
+/* ========================================
+   PRODUCT CAROUSEL SECTIONS (engines / transmissions)
+   ======================================== */
+
+.product-carousel-section {
+    padding: 20px 0;
+    background: #f5f5f5;
+}
+
+.product-carousel-section:nth-of-type(even) {
+    background: #fff;
+}
+
+.product-carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-carousel-header {
+    text-align: left;
+    margin-bottom: 50px;
+    max-width: 900px;
+}
+
+.product-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0f0f0;
+    color: #d32f2f;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.product-badge i {
+    font-size: 16px;
+}
+
+.product-carousel-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.product-carousel-title-red {
+    color: #d32f2f;
+}
+
+.product-carousel-description {
+    font-size: 17px;
+    color: #666;
+    max-width: 900px;
+    line-height: 1.7;
+}
+
+.product-carousel-wrapper {
+    position: relative;
+    margin-top: 35px;
+}
+
+/* Universal Horizontal Scrollable Row for Carousels (CSS fallback & Owl enhanced) */
+.product-carousel-wrapper .owl-carousel {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 4px 25px 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #b71c1b #22252a;
+    -webkit-overflow-scrolling: touch;
+}
+
+.product-carousel-wrapper .owl-carousel::-webkit-scrollbar {
+    height: 7px;
+}
+
+.product-carousel-wrapper .owl-carousel::-webkit-scrollbar-track {
+    background: #e5e7eb;
+    border-radius: 4px;
+}
+
+.product-carousel-wrapper .owl-carousel::-webkit-scrollbar-thumb {
+    background: #b71c1b;
+    border-radius: 4px;
+}
+
+.product-carousel-wrapper .owl-carousel > .product-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    scroll-snap-align: start;
+    margin: 0 !important;
+}
+
+/* When Owl Carousel is loaded and initialized */
+.product-carousel-wrapper .owl-carousel.owl-loaded {
+    display: block !important;
+    overflow: visible !important;
+}
+
+.product-carousel-wrapper .owl-carousel.owl-loaded .owl-stage-outer {
+    overflow: hidden;
+}
+
+.product-carousel-wrapper .owl-carousel.owl-loaded .owl-stage {
+    display: flex !important;
+    gap: 0;
+}
+
+.product-carousel-wrapper .owl-carousel.owl-loaded .owl-item {
+    float: left;
+    padding: 0 10px;
+}
+
+.product-carousel-wrapper .owl-carousel.owl-loaded .product-card {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+.product-card {
+    background: #181c24;
+    border: 1px solid #2a313d;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    min-height: 360px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    border-color: #b71c1b;
+    text-decoration: none;
+}
+
+.product-card-img-wrap {
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.product-card-img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.product-card:hover .product-card-img-wrap img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.45);
+    margin-top: auto;
+}
+
+.product-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+.product-mileage {
+    font-size: 13px;
+    color: #d1d5db;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.product-carousel-section .owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.product-carousel-section .owl-carousel .owl-nav button {
+    width: 48px;
+    height: 48px;
+    background: #b71c1b !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 50%;
+    color: #ffffff !important;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(183, 28, 27, 0.45);
+}
+
+.product-carousel-section .owl-carousel .owl-nav button:hover {
+    background: #961615 !important;
+    border-color: #ffffff !important;
+    transform: scale(1.12);
+    box-shadow: 0 8px 22px rgba(183, 28, 27, 0.65);
+}
+
+.product-carousel-section .owl-carousel .owl-nav button span {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.product-carousel-section .owl-carousel .owl-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 26px;
+    padding: 0;
+}
+
+.product-carousel-section .owl-carousel .owl-dot {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background: #ccc !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+    display: block !important;
+}
+
+.product-carousel-section .owl-carousel .owl-dot:hover {
+    background: #999 !important;
+    transform: scale(1.1);
+}
+
+.product-carousel-section .owl-carousel .owl-dot.active {
+    background: #d32f2f !important;
+    transform: scale(1.3);
+}
+
+.product-carousel-section .owl-carousel .owl-dot span {
+    display: none !important;
+}
+
+.product-carousel-section .owl-carousel .owl-dots {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}
+
+@media (min-width: 992px) and (max-width: 1499px) {
+    .product-carousel-section {
+        padding: clamp(16px, 2.5vw, 20px) 0;
+    }
+
+    .product-carousel-container {
+        padding: 0 clamp(16px, 2.8vw, 24px);
+    }
+
+    .product-carousel-title {
+        font-size: clamp(1.85rem, 3.5vw, 3rem);
+    }
+
+    .product-carousel-description {
+        font-size: clamp(15px, 1.35vw, 17px);
+    }
+
+    .product-carousel-wrapper {
+        margin-top: clamp(36px, 5vw, 60px);
+    }
+
+    .product-card {
+        min-height: clamp(320px, 34vw, 360px);
+        padding: clamp(34px, 3.8vw, 44px) clamp(16px, 2.2vw, 22px) clamp(16px, 2.2vw, 22px);
+    }
+
+    .product-name {
+        font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    }
+
+    .product-mileage {
+        font-size: clamp(12px, 1.15vw, 13px);
+    }
+
+    .owl-carousel .owl-nav button {
+        width: clamp(40px, 4vw, 50px);
+        height: clamp(40px, 4vw, 50px);
+    }
+}
+
+@media (max-width: 991px) {
+    .product-carousel-title {
+        font-size: 36px;
+    }
+
+    .product-card {
+        min-height: 380px;
+        padding: 44px 18px 20px;
+    }
+
+    .product-name {
+        font-size: 22px;
+    }
+
+    .owl-carousel .owl-nav button {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-carousel-section {
+        padding: 28px 0;
+    }
+
+    .product-carousel-header {
+        margin-bottom: 22px;
+    }
+
+    .product-carousel-wrapper {
+        margin-top: 24px;
+    }
+
+    .product-carousel-title {
+        font-size: 28px;
+    }
+
+    .product-carousel-description {
+        font-size: 15px;
+    }
+
+    .product-card {
+        min-height: 380px;
+        padding: 40px 18px 22px;
+        margin: 0 6px;
+    }
+
+    .product-name {
+        font-size: 22px;
+    }
+
+    .product-mileage {
+        font-size: 14px;
+    }
+
+    .product-carousel-section .owl-carousel .owl-nav {
+        padding: 0 4px;
+    }
+
+    .product-carousel-section .owl-carousel .owl-nav button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        opacity: 0.82;
+    }
+
+    .product-carousel-section .owl-carousel .owl-nav button span {
+        font-size: 12px;
+    }
+
+    .product-carousel-section .owl-carousel .owl-dots {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-carousel-section {
+        padding: 24px 0;
+    }
+
+    .product-carousel-wrapper {
+        margin-top: 18px;
+    }
+
+    .product-carousel-title {
+        font-size: 24px;
+    }
+
+    .product-card {
+        min-height: 340px;
+        padding: 36px 16px 28px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-carousel-section .owl-carousel .owl-nav button {
+        width: 26px;
+        height: 26px;
+        font-size: 11px;
+    }
+
+    .product-carousel-section .owl-carousel .owl-nav button span {
+        font-size: 11px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .product-card:hover {
+        transform: none;
+    }
+
+    .product-card:active {
+        transform: scale(0.98);
+    }
+
+    .owl-carousel .owl-nav button {
+        opacity: 0.9;
+    }
+
+    .owl-carousel .owl-nav button:active {
+        transform: scale(0.95);
+    }
+
+    .product-carousel-section .owl-carousel .owl-dots {
+        display: none !important;
+    }
+}

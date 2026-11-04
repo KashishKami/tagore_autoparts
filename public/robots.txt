@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow all web crawlers to access everything else
+Allow: /
+
+# Specific rules for Google's web crawler
+User-agent: Googlebot
+Allow: /public/
+Disallow: /admin/
+Disallow: /private/
+
+# Specific rules for Bing's web crawler
+User-agent: Bingbot
+Disallow: /secret/
+
+# XML Sitemap
+Sitemap: https://tagoreautoparts.com/sitemap.xml
