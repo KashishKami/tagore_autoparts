@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Astro build output & cache
+dist/
+.astro/
+
+# Environment secrets
+.env
+.env.*
+
+# Sensitive server mail credentials
+public/mail_config.php
+
+# OS metadata
+.DS_Store
+Thumbs.db
