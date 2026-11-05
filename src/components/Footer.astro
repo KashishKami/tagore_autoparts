@@ -1,0 +1,111 @@
+---
+//======================
+//     Top Floor
+//======================
+
+// 1. Current year set on the year when the code is built! Doesn't automatically updates!
+const currentYear = new Date().getFullYear();
+
+// 2. Centralised business contact
+const salesPhone = "+1 (888) 656-5933";
+const salesPhoneTel = "+18886565933";
+
+const supportPhone = "+1 (888) 558-6437";
+const supportPhoneTel = "+18885586437";
+
+const supportEmail = "support@tagoreautoparts.com";
+const businessAddress = "2700 Patriot Blvd, Glenview, IL 60026";
+
+---
+
+<!--===================-->
+<!--    Ground Floor   -->
+<!--===================-->
+
+<footer class="modern-footer">
+    <div class="modern-footer-inner">
+        
+        <!-- The Layout Zone (4 Columns) -->
+        <div class="modern-footer-grid">
+            
+            <!-- Col 1: About & Contacts -->
+            <div class="modern-footer-about">
+                <p>
+                    Tagore Autoparts is your trusted source for high-quality used engines and transmissions across the USA.
+                </p>
+                <ul class="modern-footer-contact">
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>Sales: <a href={`tel:${salesPhoneTel}`}>{salesPhone}</a></span>
+                    </li>
+                    <li>
+                        <i class="fa fa-headphones"></i>
+                        <span>Support: <a href={`tel:${supportPhoneTel}`}>{supportPhone}</a></span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <span>{businessAddress}</span>
+                    </li>
+                </ul>
+            </div> <!-- Closes Col 1 -->
+
+            <!-- Col 2: Quick Links -->
+            <div class="modern-footer-col">
+                <h4>QUICK LINKS</h4>
+                <ul class="modern-footer-links">
+                    <li><a href="https://shop.tagoreautoparts.com">Shop</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/order-status.html">Order Status</a></li>
+                    <li><a href="/checkout.html">Pay Now</a></li>
+                </ul>
+            </div> <!-- Closes Col 2 -->
+
+            <!-- Col 3: Customer Care -->
+            <div class="modern-footer-col">
+                <h4>CUSTOMER CARE</h4>
+                <ul class="modern-footer-links">
+                    <li><a href="/payment-options.html">Payment Options</a></li>
+                    <li><a href="/shipping-and-delivery.html">Shipping and Delivery</a></li>
+                    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                    <li><a href="/review.html">Customer Reviews</a></li>
+                </ul>
+            </div> <!-- Closes Col 3 -->
+
+            <!-- Col 4: Work Hours -->
+            <div class="modern-footer-col">
+                <h4>WORK HOURS</h4>
+                <ul class="modern-footer-hours">
+                    <li>
+                        <i class="fa fa-clock-o"></i>
+                        <span>Mon-Fri : 10:00 AM - 6:00 PM</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-clock-o"></i>
+                        <span>Sat and Sun : Weekend Off</span>
+                    </li>
+                </ul>
+                <div class="modern-trustpilot-note">
+                    Trusted by thousands of customers nationwide &bull; Verified reviews on <a href="https://www.trustpilot.com/review/tagoreautoparts.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+                </div>
+            </div> <!-- Closes Col 4 -->
+
+        </div> <!-- Closes .modern-footer-grid -->
+
+        <!-- Bottom Copyright Row (Outside the grid, inside the inner container!) -->
+        <div class="modern-footer-copyright">
+            <p style="margin:0;">&copy; {currentYear} Driven by Tagore Fusion LLC</p>
+        </div>
+
+    </div> <!-- Closes .modern-footer-inner -->
+</footer> <!-- Closes .modern-footer -->
+
+<!-- Floating Call Now Button (Co-located with footer) -->
+<a href={`tel:${salesPhoneTel}`} class="modern-floating-call-btn">
+    <i class="fa fa-phone"></i> Call Now
+</a>

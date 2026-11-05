@@ -1,0 +1,123 @@
+---
+
+//#############################
+//        Top Floor
+//#############################
+
+// 1. Receiving incoming props (the customization order slip)
+const { activeNav = "" } = Astro.props;
+
+// 2. Centralized business constants
+const salesPhone = "+1 (888) 656-5933";
+const salesPhoneTel = "+18886565933";
+
+const supportPhone = "+1 (888) 558-6437";
+const supportPhoneTel = "+18885586437";
+
+---
+
+<!-- ============================================================ -->
+<!-- GROUND FLOOR: HTML Template                                  -->
+<!-- ============================================================ -->
+
+<header class="modern-header">
+    <div class="modern-header-inner">
+
+        <!-- 1. LEFT BOX: Logo -->
+        <div class="modern-header-logo">
+            <a href="/index.html" class="nav-brand">
+                <img src="/img/core-img/logo.png" alt="Tagore AutoParts Logo">
+            </a>
+        </div>
+        
+        <!-- 2. CENTER BOX: Navigation Links -->
+        <nav>
+            <ul class="modern-header-nav" id="mainNavigation">
+                <li><a href="/index.html" class={activeNav === "home" ? "active" : ""}>Home</a></li>
+                <li><a href="https://shop.tagoreautoparts.com/product-category/used-engine/">Used Engine</a></li>
+                <li><a href="https://shop.tagoreautoparts.com/product-category/used-transmission/">Used Transmission</a></li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)" class="dropdown-toggle" role="button" aria-haspopup="true">
+                        Blog <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="modern-header-dropdown">
+                        <li><a href="/blog-pages/engine/index.html">Engine Guide</a></li>
+                        <li><a href="/blog-pages/transmission/index.html">Transmission Guide</a></li>
+                        <li><a href="/blog-pages/turbo/index.html">Turbo Guide</a></li>
+                        <li><a href="/blog-pages/carparts/index.html">Car Parts Guide</a></li>
+                        <li><a href="https://blog.tagoreautoparts.com" target="_blank" rel="noopener">Visit Main Blog &rarr;</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="/contact.html" class={activeNav === "contact" ? "active" : ""}>Contact Us</a></li>
+
+                <!-- Mobile Navigation Drawer Action Pills -->
+                <li class="mobile-nav-action-item">
+                    <div class="mobile-nav-actions-wrapper">
+                        <a href={`tel:${salesPhoneTel}`} class="mobile-nav-call-pill">
+                            <i class="fa fa-phone"></i> Sales: {salesPhone}
+                        </a>
+                        <a href={`tel:${supportPhoneTel}`} class="mobile-nav-call-pill mobile-nav-support-pill">
+                            <i class="fa fa-headphones"></i> Support: {supportPhone}
+                        </a>
+                        <a href="/checkout.html" class="mobile-nav-checkout-btn">
+                            <i class="fa fa-shopping-cart"></i> Checkout
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 3. RIGHT BOX: Action Buttons (Search, Call Us Dropdown, Checkout, Hamburger) -->
+        <div class="modern-header-actions">
+            <!-- Search Button -->
+            <button type="button" class="modern-search-icon-btn" onclick="toggleSearchModal()" aria-label="Search">
+                <i class="fa fa-search"></i>
+            </button>
+
+            <!-- Call Us Dropdown -->
+            <div class="call-dropdown-wrapper">
+                <button type="button" class="modern-call-pill call-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+                    <i class="fa fa-phone"></i> Call Us <i class="fa fa-angle-down call-dropdown-arrow"></i>
+                </button>
+                <div class="call-dropdown-menu" role="menu">
+                    <a href={`tel:${salesPhoneTel}`} class="call-dropdown-item sales-item" role="menuitem">
+                        <i class="fa fa-phone"></i>
+                        <span class="call-dept-name">Sales:</span>
+                        <span class="call-dept-number">{salesPhone}</span>
+                    </a>
+                    <div class="call-dropdown-divider"></div>
+                    <a href={`tel:${supportPhoneTel}`} class="call-dropdown-item support-item" role="menuitem">
+                        <i class="fa fa-headphones"></i>
+                        <span class="call-dept-name">Support:</span>
+                        <span class="call-dept-number">{supportPhone}</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Checkout Button -->
+            <a href="/checkout.html" class="modern-checkout-btn">
+                Checkout
+            </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button type="button" class="modern-mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+
+    </div> <!-- Closes .modern-header-inner -->
+</header> <!-- Closes .modern-header -->
+
+<!-- 4. SEARCH MODAL (Encapsulated feature co-located with header) -->
+<div id="header-search-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:99999; align-items:center; justify-content:center;">
+    <div style="background:#111827; border:1px solid #374151; padding:30px; border-radius:10px; width:90%; max-width:550px; position:relative;">
+        <button onclick="toggleSearchModal()" style="position:absolute; top:12px; right:15px; background:transparent; border:none; color:#fff; font-size:24px; cursor:pointer;">&times;</button>
+        <h4 style="color:#fff; margin-bottom:15px;">Search Tagore Auto Parts</h4>
+        <form action="https://shop.tagoreautoparts.com" method="GET" style="display:flex; gap:10px;">
+            <input type="search" name="s" placeholder="Search engine, transmission, make, model..." style="flex:1; padding:12px 16px; border-radius:6px; border:1px solid #4b5563; background:#1f2937; color:#fff; font-size:15px;">
+            <button type="submit" style="background:#b71c1b; color:#fff; border:none; padding:12px 20px; border-radius:6px; font-weight:700; cursor:pointer;">Search</button>
+        </form>
+    </div>
+</div>
