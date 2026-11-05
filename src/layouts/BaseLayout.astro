@@ -59,6 +59,9 @@ const salesPhoneTel = "+18886565933";
         })(window, document, 'script', 'dataLayer', 'GTM-KS4SG8NK');
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- 📬 NAMED SLOT: Allows pages to inject custom Schema or extra meta into <head> -->
+    <slot name="head" />
 </head>
 
 <body class="has-modern-header">
@@ -71,8 +74,24 @@ const salesPhoneTel = "+18886565933";
     <!-- 🍞 TOP BUN: Header Component -->
     <Header activeNav={activeNav} />
 
-    <!-- 🥩 THE RESERVED LANDING PAD: Page Content Lands Here! (Gem 14) -->
+    <!-- 🥩 THE RESERVED LANDING PAD: Page Content Lands Here! -->
     <slot />
+
+    <!-- Global Slide-Out Cart Drawer -->
+    <div class="cart-bg-overlay"></div>
+    <div class="right-side-cart-area">
+        <div class="cart-button">
+            <a href="#" id="rightSideCart"><img src="/img/core-img/bag.svg" alt="Cart"> <span class="cart-count"></span></a>
+        </div>
+        <div class="cart-container" id="cartContainer">
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total" style="display: flex; flex-direction: column; align-items: center;">
+                <p style="text-align: center;">Total: <span id="cartTotal" style="font-weight: bold; color: #239636;">$0.00</span></p>
+                <a href="/checkout.html" class="btn essence-btn">Check out</a>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 🍞 BOTTOM BUN: Footer Component -->
     <Footer />

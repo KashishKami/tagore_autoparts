@@ -1,0 +1,414 @@
+---
+// ==============================================================
+// TOP FLOOR: Import Master Layout & Define SEO metadata
+// ==============================================================
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Your Source for Quality Used Engines and Transmissions";
+const pageDescription = "With access to the largest database in the US, we provide affordable prices, exceptional customer service, and nationwide shipping. Tagore auto parts";
+const pageKeywords = "Used Tranmissions Prices, Quality used Engine, turbo charging, turbo charged engine, turbo charger for car, turbo charger price, car engine turbocharger, Quality Used Transmissions, Used Engines For Sale";
+const canonicalUrl = "https://tagoreautoparts.com/about.html";
+---
+
+<!-- ============================================================ -->
+<!-- GROUND FLOOR: The Master Frame wraps the page                -->
+<!-- ============================================================ -->
+
+<BaseLayout
+    title={pageTitle}
+    description={pageDescription}
+    keywords={pageKeywords}
+    canonical={canonicalUrl}
+    activeNav="about"
+>
+    
+    <!-- ================================================= -->
+    <!-- 📬 NAMED SLOT: Schema Markup injected into <head> -->
+    <!-- ================================================= -->
+    <script type="application/ld+json" slot="head">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Us - Tagore Auto Parts",
+      "url": "https://tagoreautoparts.com/about.html",
+      "description": "Tagore Auto Parts supplies quality-tested used engines, used transmissions, and recycled OEM auto parts for domestic and foreign vehicles, backed by warranty and nationwide shipping.",
+      "mainEntity": {
+        "@type": "AutoPartsStore",
+        "name": "Tagore Auto Parts",
+        "url": "https://tagoreautoparts.com/",
+        "telephone": "+1 888-656-5933",
+        "email": "support@tagoreautoparts.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2700 Patriot Blvd",
+          "addressLocality": "Glenview",
+          "addressRegion": "IL",
+          "postalCode": "60026",
+          "addressCountry": "US"
+        }
+      }
+    }
+    </script>
+
+    <!-- ============================================== -->
+    <!-- 🥩 DEFAULT SLOT: The Unique About Us Content! -->
+    <!-- ============================================== -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcumb_area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="page-title text-center">
+                        <span class="legal-badge"><i class="fa fa-info-circle"></i> Who We Are</span>
+                        <h1>About Tagore Auto Parts</h1>
+                        <p class="legal-subtitle">America's Leading Supplier of Tested, Low-Mileage OEM Engines &amp; Transmissions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <div class="about-us-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="about-content">
+                        <h2>Welcome to our <span>Tagore AutoParts</span></h2>
+                        <p>
+                            Tagore Auto Part has access to the most extensive and largest database of used engines in
+                            the United States. Possessing a large inventory allows us to pass on the best value and the
+                            highest quality. We offer due to our extensive network of stocks. We have the old engine you
+                            require and can transport it to any US state, regardless of what kind of vehicle you
+                            drive&mdash;SUVs, large trucks, sports cars, or anything else you can think of.
+                            To make sure you acquire the correct parts for your car, we offer encountered knowledge for all
+                            of your needs. Our objective is to locate the highest caliber engines at the most affordable
+                            cost as soon as feasible. We have access to thousands of salvage and junkyards' worth of
+                            goods countrywide thanks to our distinctive and vast automotive network.
+                            You can place your order with us by utilizing our website, calling us at <b>+1
+                                888-656-5933</b>, or by filling out the form on Contact Us. A sales representative will
+                            then get in contact with you right away to assist you.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="about-content">
+                        <p>The company was established with the goal of providing quality aftermarket auto parts at
+                            affordable prices. We have an entire staff of sales and customer service representatives
+                            working in our fully staffed retail store and warehouse. Our customer care representatives are
+                            available on phone or email for help with any inquiries you may have, and our website is
+                            simple to use. Our goal is to provide you the greatest parts at the best available cost
+                            while providing the highest level of client support. In the end, our main goal is to assist
+                            you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <a href="/checkout.html" class="sticky-button">Place an order</a>
+
+    <!-- ##### Stats Cards Area ##### -->
+    <div class="container">
+        <div class="row ">
+            <div class="col-xl-6 col-lg-6">
+                <div class="card l-bg-cherry">
+                    <div class="card-statistic-3 p-4">
+                        <div class="card-icon card-icon-large"><i class="fa fa-shopping-cart"></i></div>
+                        <div class="mb-4">
+                            <h5 class="card-title mb-0">New Orders</h5>
+                        </div>
+                        <div class="row align-items-center mb-2 d-flex">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0">
+                                    7,189
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span>12.5% <i class="fa fa-arrow-up"></i></span>
+                            </div>
+                        </div>
+                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="card l-bg-blue-dark">
+                    <div class="card-statistic-3 p-4">
+                        <div class="card-icon card-icon-large"><i class="fa fa-users"></i></div>
+                        <div class="mb-4">
+                            <h5 class="card-title mb-0">Customers</h5>
+                        </div>
+                        <div class="row align-items-center mb-2 d-flex">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0">
+                                    130k
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span>9.23% <i class="fa fa-arrow-up"></i></span>
+                            </div>
+                        </div>
+                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                            <div class="progress-bar l-bg-green" role="progressbar" data-width="25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="card l-bg-green-dark">
+                    <div class="card-statistic-3 p-4">
+                        <div class="card-icon card-icon-large"><i class="fa fa-ticket"></i></div>
+                        <div class="mb-4">
+                            <h5 class="card-title mb-0">Order Confirm</h5>
+                        </div>
+                        <div class="row align-items-center mb-2 d-flex">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0">
+                                    125k
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span>10% <i class="fa fa-arrow-up"></i></span>
+                            </div>
+                        </div>
+                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                            <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="card l-bg-orange-dark">
+                    <div class="card-statistic-3 p-4">
+                        <div class="card-icon card-icon-large"><i class="fa fa-dollar"></i></div>
+                        <div class="mb-4">
+                            <h5 class="card-title mb-0">Part Shipped</h5>
+                        </div>
+                        <div class="row align-items-center mb-2 d-flex">
+                            <div class="col-8">
+                                <h2 class="d-flex align-items-center mb-0">
+                                    124k
+                                </h2>
+                            </div>
+                            <div class="col-4 text-right">
+                                <span>52.5% <i class="fa fa-arrow-up"></i></span>
+                            </div>
+                        </div>
+                        <div class="progress mt-1 " data-height="8" style="height: 8px;">
+                            <div class="progress-bar l-bg-cyan" role="progressbar" data-width="25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- ##### How Tagore AutoParts is the Best Way Section ##### -->
+    <section>
+        <div class="container container-extra-custom">
+            <h2 class="heading heading-dark text-uppercase">How Tagore AutoParts</h2>
+            <br>
+            <h3 class="">Is the Best way to buy "Used Engine and Used Transmission "?</h3>
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <img class="tild-img-1 Problems-img" src="/img/muscular-car-service.jpg"
+                        alt="a mechanic checking car engine">
+                </div>
+            </div>
+            <div class="row about-features-row">
+                <div class="col-md-12 col-lg-6 about-features-col">
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>Access to 983+ Inventory</strong></h6>
+                        <p class="">We are one of the most distinct hubs for buying used engine and used transmission. Our
+                            diverse range of used engines for sale is stretched from every Domestic model to Imported one,
+                            from Gasoline to diesel. With an expansion of 983+ inventory yards across the USA, we have
+                            stocked every make, model, year used engines amd used transmission. What we offer is a
+                            customisation of your need with our resources that results in Guaranteed satisfaction.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>ASE Professional Certified Engines</strong></h6>
+                        <p class="">Our work vouches for our Credibility!! The enthusiastic team of Tagore AutoParts has
+                            never left any stone unturned in making our customers experience EXCEPTIONAL. Every single used
+                            engine and used transmission goes through the quality assessment by the team of ASE certified
+                            mechanics. If the ordered engine or transmission doesn't live up to your expectations from the
+                            bargain, we additionally give you a 6 months return and replacement warranty.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>Exclusive Warranty up to 6 months</strong></h6>
+                        <p class="">Tagore AutoParts has never shied away from going above and beyond for our clients. We
+                            offer an exclusive warranty policy of up to 6 months on our products to provide you an assurance
+                            for our AUTHENTICITY. We have tailored a Warranty plan based on the requirements of our
+                            customers to offer a straightforward procedure for handling any issues and complaints following
+                            a purchase.</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 about-features-col">
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>Competent Price</strong></h6>
+                        <p class="">We have purposefully priced our high-quality used engines and transmission to take into
+                            account the financial element. Our endeavour is to make your purchase as convenient and
+                            economical as it could be. You don't have to think twice before placing the order as the
+                            UNCOMPROMISED quality product within such IRRESISTABLE price is a RARE combination.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>Supportive Customer Service</strong></h6>
+                        <p class="">Tagore AutoParts thrives upon cultivating long lasting relationships of trust with our
+                            customers. Don't burden yourself with any query or slightest hint of doubt, we are here just for
+                            YOU. We work with customers and prospects openly, honestly, and sincerely.</p>
+                    </div>
+                    <div class="about-feature-card">
+                        <h6 class="text-uppercase"><strong>Returns & Refunds Policy</strong></h6>
+                        <p class="">We at Tagore AutoParts have specially crafted 6 months <a href="/terms-and-conditions.html"
+                                class="font-bold">return and replacement warranty</a> to take care of any mis happening. We
+                            have a dedicated team to look after such matters and provide resolution ASAP. </p>
+                        <p class="">Our words are backed by our sincere effort to give you Exceptional service satisfaction.
+                            To strengthen our authenticity, we have reviews on Google, by our valuable customers. Just Call
+                            us at <a href="tel:+1 888-656-5933" style="display:inline-block; color: #0e8f23;"><strong> <i
+                                        class="body-number body-color"> +1 888-656-5933 </i></strong></a> or fill in the <a
+                                href="/checkout.html" class="font-bold">form</a> on our website and you will get your used
+                            engine or used transmission within the comfort of your place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- ##### Why Choose Us Section ##### -->
+    <div class="container">
+        <div class="text-center mb-2-8 mb-lg-6">
+            <h2 class="display-18 display-md-16 display-lg-14 font-weight-700">Why choose <strong
+                    class="text-primary font-weight-700">Us</strong></h2>
+            <span>The trusted source for why choose us</span>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-sm-6 col-lg-4 mb-2-9 mb-sm-0">
+                <div class="pr-md-3">
+                    <div class="text-center text-sm-right mb-2-9">
+                        <div class="mb-4">
+                            <img src="/img/why choos us/best1.png" alt="Best in Market" class="rounded-circle">
+                        </div>
+                        <h4 class="sub-info">Extensive Varieties of Auto Parts </h4>
+                        <p class="display-30 mb-0">We have a massive variety of Used Cars Engines, Transmissions &amp;
+                            Turbos.</p>
+                    </div>
+                    <div class="text-center text-sm-right">
+                        <div class="mb-4">
+                            <img src="/img/why choos us/trust.png" alt="Most Trusted" class="rounded-circle">
+                        </div>
+                        <h4 class="sub-info">Most Trusted</h4>
+                        <p class="display-30 mb-0">We are one of the top-rated car parts providers across the United
+                            States.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+                <div class="why-choose-center-image">
+                    <img src="/img/why choos us/cu.png" alt="Support" class="rounded-circle">
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="pl-md-3">
+                    <div class="text-center text-sm-left mb-2-9">
+                        <div class="mb-4">
+                            <img src="/img/why choos us/call.png" alt="call us " class="rounded-circle">
+                        </div>
+                        <h4 class="sub-info">24/7 support</h4>
+                        <p class="display-30 mb-0">We offer 24/7 customer support to provide you the best Customer
+                            Support.</p>
+                    </div>
+
+                    <div class="text-center text-sm-left">
+                        <div class="mb-4">
+                            <img src="/img/why choos us/quality.png" alt="quality used car parts" class="rounded-circle">
+                        </div>
+                        <h4 class="sub-info">Quality</h4>
+                        <p class="display-30 mb-0">We offer the best Quality engines &amp; transmissions and you can fully
+                            rely on us. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- ##### Shipping Info Area ##### -->
+    <section class="shipping-info">
+        <div class="container">
+            <ul>
+                <!-- Free Shipping -->
+                <li>
+                    <div class="media-icon">
+                        <i class="lni lni-delivery"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5>Nationwide </h5>
+                        <span>Shipping</span>
+                    </div>
+                </li>
+                <!-- 24/7 Support -->
+                <li>
+                    <div class="media-icon">
+                        <i class="lni lni-support"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5>24/7 Support.</h5>
+                        <span>Chat Or Call.</span>
+                    </div>
+                </li>
+                <!-- Online Payment -->
+                <li>
+                    <div class="media-icon">
+                        <i class="lni lni-credit-cards"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5>Online Payment.</h5>
+                        <span>Secure Payment Services.</span>
+                    </div>
+                </li>
+                <!-- Easy Return -->
+                <li>
+                    <div class="media-icon">
+                        <i class="lni lni-reload"></i>
+                    </div>
+                    <div class="media-body">
+                        <h5>Easy Return.</h5>
+                        <span>Hassle Free Shopping.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ##### Call Us Bottom CTA ##### -->
+    <br>
+    <br>
+    <section class="section-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Want to buy used engines &amp; Transmission ?</h2>
+                    <p class="mt-4 mb-4 pb-2">What are you waiting for? Request a Free Quote today!</p>
+                    <a href="tel:+18886565933" class="btn btn-custom">Call us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+
+</BaseLayout>
